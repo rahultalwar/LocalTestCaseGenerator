@@ -10,10 +10,10 @@ The system follows a 3-tier architecture designed for privacy and local executio
 
 ```mermaid
 graph TD
-    User([User]) -->|1. Type Feature Description| UI[Web UI (HTML/JS)]
-    UI -->|2. POST JSON| API[FastAPI Server (Python)]
-    API -->|3. Load Prompt Template| Tmpl[System Prompt Template]
-    API -->|4. Construct Full Prompt| LLM[Ollama (Llama 3.2)]
+    User([User]) -->|1. Type Feature Description| UI["Web UI (HTML/JS)"]
+    UI -->|2. POST JSON| API["FastAPI Server (Python)"]
+    API -->|3. Load Prompt Template| Tmpl["System Prompt Template"]
+    API -->|4. Construct Full Prompt| LLM["Ollama (Llama 3.2)"]
     LLM -->|5. Return Generated Text| API
     API -->|6. Return Markdown| UI
     UI -->|7. Render Chat Response| User
